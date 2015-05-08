@@ -1,0 +1,31 @@
+@media (min-width: 48em) {
+  div.sidebar-about h1 {
+    font-size: 32px;
+  }
+  p {
+    font-size: 16px;
+  }
+  div.sidebar nav a {
+    font-size: 16px;
+  }
+  .sidebar-nav-item.active {
+    border-left: 3px solid #FFF;
+    color: #FFF;
+  }
+}
+
+@media (min-width: 58em) {
+  div.sidebar-about h1 {
+    font-size: 42px;
+  }
+  p {
+    font-size: 20px;
+  }
+  div.sidebar nav a {
+    font-size: 20px;
+  }
+  .sidebar-nav-item.active {
+    border-left: 3px solid #FFF;
+    color: #FFF;
+  }
+}
