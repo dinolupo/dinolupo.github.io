@@ -9,7 +9,7 @@ a, a:hover, a:active, a:visited {
 }
 
 .masthead h3.masthead-title a {
-  font-size: 20px;
+  font-size: 18px;
   letter-spacing: 2px;
   font-style: italic;
   color: #666;
@@ -25,17 +25,12 @@ p {
 }
 
 .content {
-  margin-left: 16rem;
   padding-top: 0rem;
 }
 
 .page h1 {
   font-weight: 300;
   font-size: 50px;
-}
-
-div.sidebar {
-  width: 14rem;
 }
 
 div.sidebar nav a:nth-child(1) {
