@@ -32,6 +32,12 @@ p {
 	font-size: 50px;
 }
 
+.avatar {
+	width: 20%;
+	height: auto;
+	margin: 0 auto;
+}
+
 div.sidebar nav a:nth-child(1) {
 	display: none;
 }

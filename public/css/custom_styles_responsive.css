@@ -1,4 +1,7 @@
 @media (min-width: 48em) {
+  .sidebar-sticky {
+    position: static;
+  }
   div.sidebar-about h1 {
     font-size: 36px;
   }
@@ -12,9 +15,17 @@
     border-left: 3px solid #FFF;
     color: #FFF;
   }
+  .avatar {
+    width: 50%;
+    height: auto;
+    margin: 0;
+  }
 }
 
 @media (min-width: 58em) {
+  .sidebar-sticky {
+    position: static;
+  }
   div.sidebar-about h1 {
     font-size: 52px;
   }
@@ -27,5 +38,10 @@
   .sidebar-nav-item.active {
     border-left: 3px solid #FFF;
     color: #FFF;
+  }
+  .avatar {
+    width: 60%;
+    height: auto;
+    margin: 0;
   }
 }
