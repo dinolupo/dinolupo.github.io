@@ -44,4 +44,7 @@
     height: auto;
     margin: 0;
   }
+  .content {
+    max-width: 66rem;
+  }
 }
