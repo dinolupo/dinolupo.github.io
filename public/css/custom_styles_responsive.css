@@ -45,6 +45,6 @@
     margin: 0;
   }
   .content {
-    max-width: 66rem;
+    max-width: 100%;
   }
 }

@@ -76,6 +76,48 @@ BUILD SUCCESSFUL
 Total time: 6.578 secs
 {% endhighlight %}
 
+Now that you have a working gradle setup, you can download my [github project](https://github.com/dinolupo/hello-gradle.git) and try to execute some gradle commands on it like the following:
+
+{% highlight sh %}
+# build to download libraries into your local repository
+gradle build
+# update eclipse project to reflect new changes about the Java build path
+gradle eclipse
+{% endhighlight %}
+
+# build.gradle explanation
+{% highlight groovy %}
+apply plugin: 'java'
+apply plugin: 'eclipse'
+apply plugin: 'application'
+
+mainClassName = 'hello.HelloWorld'
+
+// tell gradle the file name for jar task
+jar {
+    baseName = 'hello-gradle'
+    version =  '1.0.0'
+}
+
+// The repositories block indicates that the build should resolve its dependencies from the Maven Central repository
+repositories {
+    mavenCentral()
+}
+
+// project dependencies, when you update dependencies always do a build and eclipse task to regenerate eclipse project with new dependencies
+dependencies {
+    compile "joda-time:joda-time:2.7"
+}
+
+// gradle standalone task (useful if you do not have gradle installed and download the project from github, generate executable for Windows/Unix to download automagically gradle)
+task wrapper(type: Wrapper) {
+    gradleVersion = '2.3'
+}
+{% endhighlight %}
+
+This is my Blog Access Memory post, to go deeper have a look at the full tutorial reference below.
+
+Dino.
 
 ### References
 
