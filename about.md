@@ -4,7 +4,7 @@ title: About Me
 ---
 
 <p class="message">
-  Dino Lupo is a software addicted guy with many years of experience on software architectures, programming and system integrations. He likes very much to dirt his hands with everything he thinks is important to become a better software architect. Here you will find code, best practices and worthy experiences.
+  Dino Lupo is a software addicted guy with many years of experience on software architectures, programming and system integrations. He likes very much to get his hands dirty with everything he thinks is important to become a better software architect. Here you will find code, best practices and worthy experiences.
 </p>
 
 He grew up in Salerno, Italy, with an amazing family who encouraged him to practice computers at an early stage. 
