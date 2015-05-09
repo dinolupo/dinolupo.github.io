@@ -8,7 +8,7 @@ title: About Me
 </p>
 
 He grew up in Salerno, Italy, with an amazing family who encouraged him to practice computers at an early stage. 
-He works for Atos, a global digital services company, where he achieved the flabbergastly title of "Solution Manager".
+He works for Atos, a global digital services company, where he achieved the amazingly excessive title of "Solution Manager".
 His main interest is to to understand how to create better environment that motivates people to do business designing better software systems.  
 
 
