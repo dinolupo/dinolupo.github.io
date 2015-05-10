@@ -13,7 +13,7 @@ title:               Dino Lupo
 tagline:             Blog Access Memory
 description:         'Blog Access Memory'
 url:                 http://dinolupo.github.io
-paginate:            10
+paginate:            1
 baseurl:             ""
 excerpt_separator: <!--more-->
 
