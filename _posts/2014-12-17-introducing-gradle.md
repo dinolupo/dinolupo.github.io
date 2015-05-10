@@ -2,6 +2,7 @@
 layout: post
 title: "Introducing Gradle"
 comments: true
+categories: devops gradle
 ---
 
 Gradle is a build system with many improvements over Ant and Maven. In this post I will go through an Hello World example on how I set up gradle on OSX and work along with eclipse. With few changes you can adapt this mini-guide on Windows and Linux.<!--more-->

@@ -19,7 +19,10 @@ Some fun facts about the setup of this project include:
 
 * Built for [Jekyll](http://jekyllrb.com)
 * Developed on GitHub and hosted for free on [GitHub Pages](https://pages.github.com)
-* Coded with [Sublime Text 2](http://sublimetext.com), an amazing code editor
-* Inspired by [this post](http://joshualande.com/jekyll-github-pages-poole/)
+* Coded with [Sublime Text 2](http://sublimetext.com), a great code editor and the amazing VI on OSX.
+
+## Inspiring posts
+* [Base blog structure](http://joshualande.com/jekyll-github-pages-poole/)
+* [Improved code highlighting](https://demisx.github.io/jekyll/2014/01/13/improve-code-highlighting-in-jekyll.html)
 
 Thanks for reading!

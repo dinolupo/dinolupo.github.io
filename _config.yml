@@ -5,13 +5,16 @@ permalink:           pretty
 relative_permalinks: true
 debug: false
 
+gems:
+  - jekyll-sitemap
+
 # Setup
 title:               Dino Lupo
 tagline:             Blog Access Memory
 description:         'Blog Access Memory'
 url:                 http://dinolupo.github.io
 paginate:            10
-baseurl:             /
+baseurl:             ""
 excerpt_separator: <!--more-->
 
 # Assets
