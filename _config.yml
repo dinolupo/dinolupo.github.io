@@ -14,7 +14,7 @@ tagline:             Blog Access Memory
 description:         'Blog Access Memory'
 url:                 http://dinolupo.github.io
 paginate:            10
-baseurl:             ""
+baseurl:             
 excerpt_separator: <!--more-->
 
 # Assets
