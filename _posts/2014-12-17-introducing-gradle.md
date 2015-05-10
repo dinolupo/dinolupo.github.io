@@ -78,7 +78,7 @@ Total time: 6.578 secs
 
 Now that you have a working gradle setup, you can download my [github project](https://github.com/dinolupo/hello-gradle.git) and try to execute some gradle commands on it like the following:
 
-{% highlight sh %}
+{% highlight sh linenos %}
 # build to download libraries into your local repository
 gradle build
 # update eclipse project to reflect new changes about the Java build path
@@ -86,7 +86,8 @@ gradle eclipse
 {% endhighlight %}
 
 # build.gradle explanation
-{% highlight groovy %}
+
+{% highlight groovy linenos %}
 apply plugin: 'java'
 apply plugin: 'eclipse'
 apply plugin: 'application'
