@@ -5,7 +5,7 @@ comments: true
 categories: osx bash
 ---
 
-When you start a standard OSX Terminal running bash you see that it is uncolored and boring as an old fashioned VAX terminal at university. So I decided to go with a new settings to make the overall terminal experience better, like those you see on various Linux distribution.<!--more-->
+When you start a standard OSX Terminal running bash you see that it is uncolored and boring as an old fashioned VAX terminal at university. So I decided to go with a new setting to make the overall terminal experience better, like those you see on various Linux distribution.<!--more-->
 
 My desire was to have:
 
@@ -14,7 +14,7 @@ My desire was to have:
 - colored ls
 - rapid alias as "ll" to show all files (ls -la) 
 
-My machine name is "settedinove" (that is the Italian translation of "Seven of Nine", the female borg fiction character from "Star Trek: Voyager") and this is an example terminal before applying the modification to the terminal:
+My machine name is "settedinove" (that is the Italian translation of "Seven of Nine", the female borg fiction character from "Star Trek: Voyager") and this is an example terminal before applying the modification to it:
 
 ![OSX Terminal before treatment]({{site.baseurl}}/assets/images/2015-05-13-SS1.png)
 
@@ -115,11 +115,24 @@ alias ll='ls -lGh $@'
 export PATH=$PATH:~/gradle-2.3/bin
 {% endhighlight %}
 
-This is how appears after the treatment:
+Now you have to load your configuration (or exit and open again the Terminal):
+
+{% highlight sh %}
+source .bash_profile
+{% endhighlight %}
+
+or
+
+{% highlight sh %}
+. .bash_profile
+{% endhighlight %}
+
+
+This is how it appears after the treatment:
 
 ![OSX Terminal after treatment]({{site.baseurl}}/assets/images/2015-05-13-SS2.png)
 
-You can do "ll" to show the contents of a directory, add any alias command you like in this file, improving  the overall shell experience.
+You can do "ll" to show the contents of a directory, add any alias command you like in .bash_profile, improving the overall shell experience.
 
 Feel free to share improvements in the comments below.
 
