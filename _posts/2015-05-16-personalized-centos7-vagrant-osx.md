@@ -5,7 +5,7 @@ comments: true
 categories: osx vagrant centos
 ---
 
-Are you familiar with Vagrant? Beside official definition [Why Vagrant](http://docs.vagrantup.com/v2/why-vagrant/index.html) if you need fast and solid environment to try out your software on VMs, than you have to give Vagrant a chance because it can be seen as a wrapper on top of virtualization software that can speed up your work a lot. At the end of this tutorial you will be able to startup new personalized machines in a matter of seconds.<!--more-->
+Are you familiar with Vagrant? Beside the official definition [Why Vagrant](http://docs.vagrantup.com/v2/why-vagrant/index.html), in case you need a fast and solid environment to try out your software on VMs, then you have to give to Vagrant a chance because it can be seen as a wrapper on top of virtualization software that can speed up your work a lot. At the end of this tutorial you will be able to start new personalized machines in a matter of seconds.<!--more-->
 
 In this How To we are going to prepare a Vagrant local environment box VM based on CentOS 7 minimal image, with dev support and some basic improvements.
 
@@ -28,7 +28,7 @@ In this How To we are going to prepare a Vagrant local environment box VM based 
 
 ### After Reboot do the following steps:
 
-- If you do not have a pair of RSA keys, generate it on OSX Terminal with the following command, leave password blank:
+- If you do not have a pair of RSA keys, generate these on OSX Terminal with the following command, leave password blank:
 
 ```ssh-keygen -t rsa```
 
@@ -55,7 +55,7 @@ edit ```/etc/ssh_config``` and comment the following line with a #:
 
 ```yum groupinstall base``` 
 
-### Configure SSH with no password login, this is crucial because without this Vagrant has problem with ssh'ing VM asking for password:
+### Configure SSH with no password login, this is crucial because without, Vagrant has a problem with ssh'ing VM asking for password:
 
 - ```vi /etc/ssh/sshd_config```
 
@@ -79,11 +79,11 @@ and add the following line to the sudoers file doing ```visudo```:
 
 ```sudo pwd```
 
-It will return the current working directory without asking a password. If you are prompted for a password, something is wrong.
+It will return the current working directory without asking for a password. If you are prompted for a password, something is wrong.
 
 ### Install the public key ```id_rsa.pub``` in the VM
 
-This is the way Vagrant will communicate with the VM. In OSX I had problems with "insecure vagrant key" and after googling a lot I realized that creating a fresh pair of keys have solved the problem:
+This is the way Vagrant will communicate with the VM. In OSX I had problems with "insecure vagrant key" and after googling a lot I realized that creating a fresh pair of keys solved the problem:
 
 {% highlight sh %}
 mkdir -p /home/vagrant/.ssh
@@ -141,7 +141,7 @@ line 171 : add .env after @machine :
 
 ![vagrant file correction]({{site.baseurl}}/assets/images/2015-05-16-SS4.png)
 
-- Without shutting down the VM, go into another OSX Terminal, create a folder and write the following:
+- Without shutting down the VM, open a new OSX Terminal, create a folder and write the following:
 
 ```vagrant package --base vagrant-centos7-enhanced```
 
