@@ -5,7 +5,7 @@ comments: true
 categories: osx vagrant centos
 ---
 
-Are you familiar with Vagrant? Beside the official definition [Why Vagrant](http://docs.vagrantup.com/v2/why-vagrant/index.html), in case you need a fast and solid environment to try out your software on VMs, then you have to give to Vagrant a chance because it can be seen as a wrapper on top of virtualization software that can speed up your work a lot. At the end of this tutorial you will be able to start new personalized machines in a matter of seconds.<!--more-->
+Are you familiar with Vagrant? Beside the official definition [Why Vagrant](http://docs.vagrantup.com/v2/why-vagrant/index.html), in case you need a fast and solid environment to try out your software on VMs, then you have to give Vagrant a try because it can be seen as a wrapper on top of virtualization software that can speed up your work a lot. At the end of this tutorial you will be able to start new personalized machines in a matter of seconds.<!--more-->
 
 In this How To we are going to prepare a Vagrant local environment box VM based on CentOS 7 minimal image, with dev support and some basic improvements.
 
@@ -28,7 +28,7 @@ In this How To we are going to prepare a Vagrant local environment box VM based 
 
 ### After Reboot do the following steps:
 
-- If you do not have a pair of RSA keys, generate these on OSX Terminal with the following command, leave password blank:
+- If you do not have a pair of RSA keys, generate these in OSX Terminal with the following command, leave password blank:
 
 ```ssh-keygen -t rsa```
 
@@ -42,7 +42,7 @@ We will need those two files ```id_rsa``` and ```id_rsa.pub``` in the following 
 ssh root@127.0.0.1 -p 2222
 ``` using password _vagrant_
 
-If you have a LOCALE error inside the VM console, then you can solve the problem doing the following on OSX Terminal:
+If you have a LOCALE error inside the VM console, then you can solve the problem doing the following in OSX Terminal:
 
 ### (OPTIONAL) LOCALE PROBLEM ON OSX via SSH
 prevent sending LC_ALL variable to the server: 
@@ -104,7 +104,7 @@ service sshd restart
 
 ### Install Guest Tools 
 
-- Host-D to mount Guest Tools CD rom (if centos iso is mounted, a screen like the following appears and you have to select force unmount)
+- Host-D to mount Guest Tools CD-ROM (if centos iso is mounted, a screen like the following appears and you have to select force unmount)
 ![VirtualBox Accept]({{site.baseurl}}/assets/images/2015-05-16-SS3.png)
 
 yum install gcc make 
@@ -113,7 +113,7 @@ mount /dev/sr0 /mnt -r
 cd /mnt
 ./VBoxLinuxAdditions.run
 
-### Enhance you Centos bash experience with these files:
+### Enhance your Centos bash experience with these files:
 
 - [.vimrc](https://gist.github.com/b0cbcec4101b6290e6d6.git) change colorscheme and add <SPACE> command to clear search in VIM
 - [.bashrc](https://gist.github.com/276de2a657ff8258f367.git) add a great command prompt for bash
@@ -157,7 +157,7 @@ You can rename the file with:
 
 ```vagrant init centos7```
 
-- modify Vagrantfile with the follwing, so you tell vagrant to use your private key to SSH without prompting password:
+- modify Vagrantfile with the follwing, so you tell vagrant to use your private key to SSH without prompting for password:
 
 {% highlight sh %}
   # SSH Agent Forwarding
@@ -172,7 +172,7 @@ You can rename the file with:
 
 ```vagrant up```
 
-You can open other shells to the VM executing:
+You can open other shells in the VM by executing:
 
 ```vagrant ssh```
 
