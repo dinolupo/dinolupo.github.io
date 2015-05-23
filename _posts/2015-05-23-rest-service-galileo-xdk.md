@@ -74,7 +74,7 @@ As you can see it take a very long time to write the image on the microSD card (
 
 Put SD card into Galileo, than plug the Ethernet cable and power on the device. Wait about a minute, until the SD led stops blinking:
 
-![img4]({{site.baseurl}}/assets/images/2015-05-23-n4.jpg)
+![img4]({{site.baseurl}}/assets/images/2015-05-23-n4.JPG)
 
 Open XDK IDE and select your device: 
 
