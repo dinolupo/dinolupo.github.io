@@ -182,7 +182,7 @@ OSX Terminal calls coming from Galileo:
 ![OSX Terminal calls coming from Galileo]({{site.baseurl}}/assets/images/2015-05-23-n51.png)
 
 Green Led On:
-![Green Led On]({{site.baseurl}}/assets/images/2015-05-23-n52.JPG)
+![Green Led On]({{site.baseurl}}/assets/images/2015-05-23-n52.jpg)
 
 ### From the OSX Terminal, close the server pressing ```<CTRL>-C``` without closing the running node.js program on Galileo, you will see:
 
@@ -190,7 +190,7 @@ IDE Console failed calls:
 ![IDE Console failed calls]({{site.baseurl}}/assets/images/2015-05-23-n60.png)
 
 Red Led On:
-![Red Led On]({{site.baseurl}}/assets/images/2015-05-23-n62.JPG)
+![Red Led On]({{site.baseurl}}/assets/images/2015-05-23-n62.jpg)
 
 ### Service Performance Test
 
@@ -245,7 +245,7 @@ IDE Console Timeout logs:
 ![IDE Console Timeout logs]({{site.baseurl}}/assets/images/2015-05-23-n70.png)
 
 Green and Yellow leds are on:
-![Green and Yellow leds are on]({{site.baseurl}}/assets/images/2015-05-23-n72.JPG)
+![Green and Yellow leds are on]({{site.baseurl}}/assets/images/2015-05-23-n72.jpg)
 
 This is only a sample, you will need electric skills to connect high voltage lamps. 
 Thanks for reading. 
