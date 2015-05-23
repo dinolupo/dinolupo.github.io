@@ -184,7 +184,7 @@ OSX Terminal calls coming from Galileo:
 Green Led On:
 ![Green Led On]({{site.baseurl}}/assets/images/2015-05-23-n52.jpg)
 
-### From the OSX Terminal, close the server pressing ```<CTRL>-C``` without closing the running node.js program on Galileo, you will see:
+### From the OSX Terminal where Dropwizard is running, close it pressing ```<CTRL>-C``` without closing the running node.js program on XDK (Galileo), you will see:
 
 IDE Console failed calls:
 ![IDE Console failed calls]({{site.baseurl}}/assets/images/2015-05-23-n60.png)
