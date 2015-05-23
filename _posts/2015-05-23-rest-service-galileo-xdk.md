@@ -254,6 +254,7 @@ Thanks for reading.
 ## Resources:
 
 [IoT project with Intel Galileo](http://www.drdobbs.com/embedded-systems/building-an-iot-project-with-intel-galil/240169187)
+
 [Add Rest based services to IoT devices](http://www.drdobbs.com/embedded-systems/adding-rest-based-web-services-to-iot-de/240169214)
 
 
