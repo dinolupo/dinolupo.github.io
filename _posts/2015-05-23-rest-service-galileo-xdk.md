@@ -5,34 +5,34 @@ comments: true
 categories: IoT
 ---
 
-In this tutorial I'm going to build a node.js rest web service server and client in the IoT platform Intel Galileo gen 2. I realized that I needed a "physical" way to check if some services are performing good or bad in the network. This is a little but working example that could be useful if you want to see real physical alerts based on some good or bad service behaviours. Some examples are: a software factory wants to see big green or red lights in a room if an integration test has failed or not, or a devops guy wants to know if some important services (e.g. service discovery service in a microservice architecture) are up or down, and so on...<!--more--> 
+In this tutorial I'm going to build a node.js rest web service server and client in the IoT platform Intel Galileo gen 2. I realized that I needed a "physical" way to check if some services are performing good or bad in the network. This is a little but working example that could be useful if you want to see real physical alerts based on some good or bad service behaviours. Some examples are: a software factory want to see green or red lights in a room when an integration test has failed or not, or a devops guy wants to know if some important services (e.g. service discovery service in a microservice architecture) are up or down, and so on...<!--more--> 
 
 ### Preliminary Steps:
 
-I will use a basic service template from the Dropwizard tutorial. I updated the demo template to use gradle instead of maven. You can clone or fork it from this repo: [https://github.com/dinolupo/dropwizard-gradle-onejar-template.git](https://github.com/dinolupo/dropwizard-gradle-onejar-template.git)
+I'll use a basic service template from the Dropwizard tutorial. I updated the demo template to use gradle instead of maven. You can clone or fork it from this repo: [https://github.com/dinolupo/dropwizard-gradle-onejar-template.git](https://github.com/dinolupo/dropwizard-gradle-onejar-template.git)
 
-In this tutorial I am going to use Intel XDK IoT Edition IDE installed on OSX Yosemite. I will go very fast on XDK download and setup with board so, if you want to go slow on that, follow the articles in the reference section at the bottom.  
+In this tutorial I'm going to use Intel XDK IoT Edition IDE installed on OSX Yosemite. I'll be very fast on the XDK download and setup with the board, so, if you want to go slow on that, follow the articles in the reference section at the bottom.  
 
 [Download XDK from Intel](https://software.intel.com/en-us/html5/xdk-iot#download)
 
-Register inside a tool for an XDK account if you do not have any.
+Register inside a tool for an XDK account if you don't have any.
 
-This tutorial needs an updated Yocto Linux meta distribution running from a microSD card that must be plugged in to the board. 
+This tutorial needs an updated Yocto Linux meta distribution running from a microSD card that must be plugged into the board. 
 
 You need to download the latest version of the Yocto boot image ```iot-devkit-latest-mmcblkp0.direct.bz2```, decompress the downloaded image file, and write the extracted image ```iot-devkit-latest-mmcblkp0.direct``` to the microSD card.
 [Latest compressed boot image](http://iotdk.intel.com/images/iot-devkit-latest-mmcblkp0.direct.bz2)
 
-__Pay attention to this procedure because otherwise you risk to delete all of your content on another drive.__
+__Pay attention to this procedure, because otherwise you'll risk to delete all of your content on another drive.__
 
-Once you have inserter your micro SD card into your host with a USB or SD adapter (I'm using an SD adapter here), take note of the name of your partition using Disk Utility. My previous micro SF was formatted with GALILEO label as shown in the following image:
+Once you have inserted your micro SD card into your host with a USB or SD adapter (I'm using an SD adapter here), take note of the name of your partition using Disk Utility. My previous micro SD was formatted with GALILEO label as shown in the following image:
 
 ![Disk Utility shows GALILEO partition]({{site.baseurl}}/assets/images/2015-05-23-n2.png)
 
-Opening a terminal, you can see the same information plus the crucial one: what is the block device associated to that SD using the ```mount``` command as follows:
+Opening a terminal, you can see the same information plus the crucial one: what's the block device associated to the SD, using the ```mount``` command as follows:
 
 ![img1]({{site.baseurl}}/assets/images/2015-05-23-n1.png)
 
-Note that the command will output the mounted partitions, so for example in my case the SD card have 1 partition "s1" with composite device name ```disk5s1```. So cutting the partition from the mounted device name gives you the device (disk) name ```disk5```.  
+Note that the command will output the mounted partitions, so for example in my case the SD card has 1 partition "s1" with composite device name ```disk5s1```. So cutting the partition from the mounted device name gives you the device (disk) name ```disk5```.  
 
 Complete command list:
 
@@ -70,9 +70,9 @@ Volume GALILEO on disk5s1 unmounted
 [09:40:06]$ 
 {% endhighlight %}
 
-As you can see it take a very long time to write the image on the microSD card (more than an hour on my 32GB microSD card). So wait until the command finishes and the terminal displays the prompt again before closing the terminal window.
+As you can see it takes very long to write the image on the microSD card (more than an hour on my 32GB microSD card). So wait until the command finishes and the terminal displays the prompt again, before closing the terminal window.
 
-Put SD card into Galileo, than plug the Ethernet cable and power on the device. Wait about a minute, until the SD led stops blinking:
+Put the SD card into Galileo, then plug the Ethernet cable and power on the device. Wait about a minute, until the SD led stops blinking:
 
 ![img4]({{site.baseurl}}/assets/images/2015-05-23-n4.JPG)
 
@@ -247,7 +247,7 @@ IDE Console Timeout logs:
 Green and Yellow leds are on:
 ![Green and Yellow leds are on]({{site.baseurl}}/assets/images/2015-05-23-n72.jpg)
 
-This is only a sample, you will need electric skills to connect high voltage lamps. 
+This is only an example, you'll need electrical skills to connect high voltage lamps. 
 Thanks for reading. 
 
 
