@@ -5,7 +5,7 @@ comments: true
 categories: IoT
 ---
 
-In this tutorial I'm going to build a node.js rest web service server and client in the IoT platform Intel Galileo gen 2. I realized that I needed a "physical" way to check if some services are performing good or bad in the network. This is a little but working example that could be useful if you want to see real physical alerts based on some good or bad service behaviours. Some examples are: a software factory want to see green or red lights in a room when an integration test has failed or not, or a devops guy wants to know if some important services (e.g. service discovery service in a microservice architecture) are up or down, and so on...<!--more--> 
+In this tutorial I'm going to build a node.js rest web service server and client in the IoT platform Intel Galileo gen 2. I realized that I needed a "physical" way to check if some services are performing good or bad in the network. This is a little but working example that could be useful if you want to see real physical alerts based on some good or bad service behaviours. Some examples are: a software factory want to see green or red lights in a room when an integration test has failed or not, or a devops guy wants to know if some important services (e.g. service discovery service in a microservice architecture) are up or down, and so on...<!--more-->
 
 ### Preliminary Steps:
 
@@ -17,7 +17,7 @@ In this tutorial I'm going to use Intel XDK IoT Edition IDE installed on OSX Yos
 
 Register inside a tool for an XDK account if you don't have any.
 
-This tutorial needs an updated Yocto Linux meta distribution running from a microSD card that must be plugged into the board. 
+This tutorial needs an updated Yocto Linux meta distribution running from a microSD card that must be plugged into the board.
 
 You need to download the latest version of the Yocto boot image ```iot-devkit-latest-mmcblkp0.direct.bz2```, decompress the downloaded image file, and write the extracted image ```iot-devkit-latest-mmcblkp0.direct``` to the microSD card.
 [Latest compressed boot image](http://iotdk.intel.com/images/iot-devkit-latest-mmcblkp0.direct.bz2)
@@ -67,7 +67,7 @@ Volume GALILEO on disk5s1 unmounted
 131+1 records in
 131+1 records out
 1103102976 bytes transferred in 3914.000749 secs (281835 bytes/sec)
-[09:40:06]$ 
+[09:40:06]$
 {% endhighlight %}
 
 As you can see it takes very long to write the image on the microSD card (more than an hour on my 32GB microSD card). So wait until the command finishes and the terminal displays the prompt again, before closing the terminal window.
@@ -76,7 +76,7 @@ Put the SD card into Galileo, then plug the Ethernet cable and power on the devi
 
 ![img4]({{site.baseurl}}/assets/images/2015-05-23-n4.JPG)
 
-Open XDK IDE and select your device: 
+Open XDK IDE and select your device:
 
 ![img3]({{site.baseurl}}/assets/images/2015-05-23-n3.png)
 
@@ -91,7 +91,7 @@ Set the following options on the IDE:
 var http = require("http");
 // Require the MRAA library
 var mraa = require('mraa');
- 
+
 // Print the MRAA library version to the IDE console
 console.log('MRAA Library Version: ' + mraa.getVersion());
 
@@ -147,7 +147,7 @@ var interval = setInterval(function() {
             serviceUpLed.write(0);
             serviceDownLed.write(1);
     });
-    
+
     // if request timeout is passed, open the YELLOW led
     req.setTimeout(1000, function() {
         console.log("---> Request Timeout");
@@ -157,7 +157,7 @@ var interval = setInterval(function() {
 
 // if you want to run a server, uncomment the following. It could be useful to adjust timeouts or to switch watched services on the fly
 //var server = http.createServer(function(request, response) {
-// 
+//
 //    if ((request.method == 'GET') && (request.url = '/someservice')) {
 // 		// do something useful
 //    }
@@ -247,8 +247,8 @@ IDE Console Timeout logs:
 Green and Yellow leds are on:
 ![Green and Yellow leds are on]({{site.baseurl}}/assets/images/2015-05-23-n72.jpg)
 
-This is only an example, you'll need electrical skills to connect high voltage lamps. 
-Thanks for reading. 
+This is only an example, you'll need electrical skills to connect high voltage lamps.
+Thanks for reading.
 
 
 ## Resources:
@@ -256,6 +256,3 @@ Thanks for reading.
 [IoT project with Intel Galileo](http://www.drdobbs.com/embedded-systems/building-an-iot-project-with-intel-galil/240169187)
 
 [Add Rest based services to IoT devices](http://www.drdobbs.com/embedded-systems/adding-rest-based-web-services-to-iot-de/240169214)
-
-
-

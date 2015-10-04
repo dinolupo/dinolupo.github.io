@@ -11,12 +11,12 @@ categories:
 - ANT
 ---
 
-  
+
 Enterprise web applications have multiple configuration files both XML and properties types. When you deploy your application you may need to change values like URL, IP, login, password, etc. in all of those files. My solution was to build a tool with ANT using "replaceregexp". But let's go with an example.
 <!--more-->
 We have a JBoss data source definition file into the deploy directory, this example has two db connections:
-        
- {% highlight xml linenos %} 
+
+ {% highlight xml linenos %}
 <datasources>
 
   <local-tx-datasource>
@@ -33,7 +33,7 @@ We have a JBoss data source definition file into the deploy directory, this exam
     <blocking-timeout-millis>5000</blocking-timeout-millis>
     <idle-timeout-minutes>15</idle-timeout-minutes>
   </local-tx-datasource>
-  
+
   <local-tx-datasource>
     <jndi-name>SecondConnectionDS</jndi-name>
     <connection-url>jdbc:mysql://dbserver_name:3306/database2</connection-url>
@@ -57,22 +57,22 @@ The ant build.xml that permits to modify the connection-url, user-name and passw
 (to explain the the regular expression which I used, note that I match the entire XML tag and it's content, and with the use of parenthesis I remember what to mantain and what to discard/substitute).  
 
 
-{% highlight xml linenos %} 
+{% highlight xml linenos %}
 <?xml version="1.0"?>
 <project name="datasources_configuration" default="init" basedir=".">
 
     <!-- ************************************************************ -->
     <!--             Configuration properties                         -->
     <!-- ************************************************************ -->
-    
+
     <property name="jboss" value="c:/jboss-3.2.6"/>
     <property name="srv" value="all"/>
-    
+
     <property name="mysql_db_ip" value="192.168.1.10"/>
     <property name="mysql_db_port" value="3306"/>
     <property name="mysql_db_user" value="root_new"/>
     <property name="mysql_db_password" value="Password_new"/>
-    
+
     <target name="init">
         <echo message="-------------------------------------------------------------------------" />
         <echo message="JBoss directory:             ${jboss}" />
@@ -92,7 +92,7 @@ The ant build.xml that permits to modify the connection-url, user-name and passw
                 <include name="standard-mysql-ds.xml"/>
             </fileset>
         </replaceregexp>
-        
+
         <replaceregexp byline="true">
             <regexp pattern="(Wuser-nameWs*)(.+)(WWuser-nameW)"/>
           <substitution expression="1${mysql_db_user}3"/>
@@ -107,7 +107,7 @@ The ant build.xml that permits to modify the connection-url, user-name and passw
                 <include name="standard-mysql-ds.xml"/>
             </fileset>
         </replaceregexp>
-        
+
     </target>
 
 </project>

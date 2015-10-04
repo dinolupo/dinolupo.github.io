@@ -14,7 +14,7 @@ tagline:             Blog Access Memory
 description:         'Blog Access Memory'
 url:                 http://dinolupo.github.io
 paginate:            10
-baseurl:             
+baseurl:
 excerpt_separator: <!--more-->
 
 # Assets
@@ -31,7 +31,7 @@ author:
   email:             dino.lupo@gmail.com
 
 # Custom vars
-version:             0.2.1 alpha 
+version:             0.3 beta 
 github:
   repo:              https://github.com/dinolupo/dinolupo.github.io
 
@@ -39,4 +39,3 @@ pages_list:
   About: '/about'
   Archive: '/archive'
   Feed: '/atom.xml'
-
